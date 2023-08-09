@@ -1,3 +1,3 @@
 from django.contrib import admin
+#from quizz.forms import RegistrationForm
 
-# Register your models here.

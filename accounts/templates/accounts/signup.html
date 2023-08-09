@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>S'inscrire</h1>
+<form method="POST">
+    {% csrf_token %}<!--jeton de sécurité utilisé par django ====john==== -->
+    <P>
+        <Label for="username">nom du candidat</Label>
+        <input id="username" type="text" name="username">
+    </P>
+    <P>
+        <Label for="firstname">prénom du candidat</Label>
+        <input id="lastname" type="text" name="lastname">
+    </P>
+    <P>
+        <Label for="contact">contact du candidat</Label>
+        <input id="contact" type="text" name="contact">
+    </P>
+    <P>
+        <Label for="email">adresse email du candidat</Label>
+        <input id="email" type="text" name="email">
+    </P>
+    <P>
+        <Label for="password">mot de passe</Label>
+        <input id="password" type="password" name="password">
+    </P>
+    <button type="submit">s'inscrire</button>
+</form>
+
+{% endblock %}

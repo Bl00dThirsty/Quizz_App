@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Quizz de l'application de l'académie</title>
+    </head>
+    <body>
+        {% if not user.is_authenticated %}
+
+        <a href="{% url 'signup' %}">S'inscrire</a>
+
+        {% endif %}
+        
+
+        {% block content %}
+
+
+        {% endblock %}
+    </body>
+</html>

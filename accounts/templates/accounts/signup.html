@@ -1,31 +1,78 @@
-{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>SAI I LAMA QUIZZ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link  rel="stylesheet" type="text/css" media="all" href="{% static 'css/style.css' %}" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+    
 
-{% block content %}
-
-<h1>S'inscrire</h1>
-<form method="POST">
-    {% csrf_token %}<!--jeton de sécurité utilisé par django ====john==== -->
-    <P>
-        <Label for="username">nom du candidat</Label>
-        <input id="username" type="text" name="username">
-    </P>
-    <P>
-        <Label for="firstname">prénom du candidat</Label>
-        <input id="lastname" type="text" name="lastname">
-    </P>
-    <P>
-        <Label for="contact">contact du candidat</Label>
-        <input id="contact" type="text" name="contact">
-    </P>
-    <P>
-        <Label for="email">adresse email du candidat</Label>
-        <input id="email" type="text" name="email">
-    </P>
-    <P>
-        <Label for="password">mot de passe</Label>
-        <input id="password" type="password" name="password">
-    </P>
-    <button type="submit">s'inscrire</button>
-</form>
-
-{% endblock %}
+	<div class="main-w3layouts wrapper">
+        <h1><div class="col-xs-12">
+            <div id="logo">
+                <a href="Accueil.html" title="">
+                    <img class="normal_logo" src="img/PRÉSENTATION 4G1.png" alt="logo"
+                                         title="" style="max-height:100px;"/>
+                </a>
+            </div>
+        </div></h1>
+		<h1>FORMULAIRE</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="#" method="post">
+					<div>
+						<label for="name">Name</label>
+					<input class="text" type="text" name="name" placeholder="Nom" required="">
+					</div>
+                    <input class="text" type="text" name="lastname" placeholder="Prenom" required="">
+					<div>
+						<label for="name">Date de naissance</label>
+                    <input class="input--style-4 js-datepicker" type="text" name="Prenom" placeholder="JJ/MM/AAAA" required="">
+					</div>
+					<input class="text email" type="email" name="email" placeholder="Email" required="">
+                    <input class="input--style-4" type="text" name="phone" placeholder="Numero de telephone" required="">
+					<input class="text" type="password" name="password" placeholder="Mot de passe" required="">
+					<input class="text w3lpass" type="password" name="password" placeholder="Confirmez le mot de passe" required="">
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>Les informations sont t-elles bien remplies?</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="ENREGISTRER">
+				</form>
+			<!--<p>Don't have an Account? <a href="#"> Precedent!</a></p>-->	
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			<p>© 2023 sai i lama . Tout droits reserve | Designe par <a href="http:\\www.Digit-Tech-Innov.com" target="_blank">Digit-Tech-Innov</a></p>
+		</div>
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>
+</html>

@@ -20,25 +20,17 @@
 	<div class="main-w3layouts wrapper">
         <h1><div class="col-xs-12">
             <div id="logo">
-                <a href="Accueil.html" title="">
-                    <img class="normal_logo" src="img/PRÉSENTATION 4G1.png" alt="logo"
+                    <img class="normal_logo" src="{% static 'img/PRÉSENTATION 4G1.png' %}" alt="logo"
                                          title="" style="max-height:100px;"/>
-                </a>
             </div>
         </div></h1>
 		<h1>FORMULAIRE</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post">
-					<div>
-						<label for="name">Name</label>
 					<input class="text" type="text" name="name" placeholder="Nom" required="">
-					</div>
                     <input class="text" type="text" name="lastname" placeholder="Prenom" required="">
-					<div>
-						<label for="name">Date de naissance</label>
                     <input class="input--style-4 js-datepicker" type="text" name="Prenom" placeholder="JJ/MM/AAAA" required="">
-					</div>
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
                     <input class="input--style-4" type="text" name="phone" placeholder="Numero de telephone" required="">
 					<input class="text" type="password" name="password" placeholder="Mot de passe" required="">

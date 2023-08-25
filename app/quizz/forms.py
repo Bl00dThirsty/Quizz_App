@@ -19,7 +19,6 @@ git
 
 """
 
-
 """class RegistrationForm(forms.Form):
     name = forms.CharField(label='Nom du candidat', max_length=100)
     forename = forms.CharField(label='Prénom du candidat', max_length=100)

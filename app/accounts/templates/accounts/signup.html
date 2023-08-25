@@ -27,14 +27,15 @@
 		<h1>FORMULAIRE</h1>
 		<div class="main-agileinfo">
 			<div class="agileits-top">
-				<form action="#" method="post">
+				<form action="{% url 'signup' %}" method="POST">
+					{% csrf_token %}
 					<input class="text" type="text" name="name" placeholder="Nom" required="">
-                    <input class="text" type="text" name="lastname" placeholder="Prenom" required="">
-                    <input class="input--style-4 js-datepicker" type="text" name="Prenom" placeholder="JJ/MM/AAAA" required="">
+                    <input class="text" type="text" name="forename" placeholder="Prenom" required="">
+                    <input class="input--style-4 js-datepicker" type="text" name="date" placeholder="JJ/MM/AAAA" required="">
 					<input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="input--style-4" type="text" name="phone" placeholder="Numero de telephone" required="">
+                    <input class="input--style-4" type="text" name="phone_number" placeholder="Numero de telephone" required="">
 					<input class="text" type="password" name="password" placeholder="Mot de passe" required="">
-					<input class="text w3lpass" type="password" name="password" placeholder="Confirmez le mot de passe" required="">
+					<input class="text w3lpass" type="password" name="confirm_password" placeholder="Confirmez le mot de passe" required="">
 					<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">

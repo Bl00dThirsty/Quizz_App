@@ -11,39 +11,74 @@
 <!-- //Custom Theme files -->
 <!-- web font -->
 <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <!-- //web font -->
 </head>
 <body>
 	<!-- main -->
     
 
-	<div class="main-w3layouts wrapper">
+	<div class="wrapper">
         <h1><div class="col-xs-12">
             <div id="logo">
-                    <img class="normal_logo" src="{% static 'img/PRÉSENTATION 4G1.png' %}" alt="logo"
+                    <img class="normal_logo" src="{% static 'img/logo.png' %}" alt="logo"
                                          title="" style="max-height:100px;"/>
             </div>
         </div></h1>
-		<h1>FORMULAIRE</h1>
+		
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="{% url 'signup' %}" method="POST">
 					{% csrf_token %}
-					<input class="text" type="text" name="name" placeholder="Nom" required="">
-                    <input class="text" type="text" name="forename" placeholder="Prenom" required="">
-                    <input class="input--style-4 js-datepicker" type="text" name="date" placeholder="JJ/MM/AAAA" required="">
-					<input class="text email" type="email" name="email" placeholder="Email" required="">
-                    <input class="input--style-4" type="text" name="phone_number" placeholder="Numero de telephone" required="">
-					<input class="text" type="password" name="password" placeholder="Mot de passe" required="">
-					<input class="text w3lpass" type="password" name="confirm_password" placeholder="Confirmez le mot de passe" required="">
-					<div class="wthree-text">
+					<h1>FORMULAIRE</h1>
+
+
+
+					<div class="input-box">
+						<input class="text" type="text" name="name" placeholder="Nom" required="">
+						<i class='bx bx-user'></i>
+					</div>
+					<div class="input-box">
+						<input class="text" type="text" name="forename" placeholder="Prenom" required="">
+						<i class='bx bx-user'></i>
+					</div>
+					<div class="input-box">
+						<input class="input--style-4 js-datepicker" type="text" name="date" placeholder="AAAA-MM-JJ" required="">
+						<i class='bx bx-calendar'></i>
+					</div>
+					<div class="input-box">
+						<input class="text email" type="email" name="email" placeholder="Email" required="">
+						<i class='bx bx-envelope' ></i>
+					</div>
+					<div class="input-box">
+						<input class="input--style-4" type="text" name="phone_number" placeholder="Numero de telephone" required="">
+						<i class='bx bx-phone' ></i>
+					</div>
+					<div class="input-box">
+						<input class="text" type="password" name="password" placeholder="Mot de passe" required="">
+						<i class='bx bx-lock-alt' ></i>
+					</div>
+					<div class="input-box">
+						<input class="text w3lpass" type="password" name="confirm_password" placeholder="Confirmez le mot de passe" required="">
+						<i class='bx bx-lock-alt' ></i>
+					</div>
+                    
+                    
+					
+                    <div class="remember-forgot">
+						<label><input type="checkbox">Les informations entrées sont-elles valides?</label>
+					</div>
+					<button type="submit" class="btn">Enregistrer</button>
+					
+					
+					<!--<div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
 							<span>Les informations sont t-elles bien remplies?</span>
 						</label>
 						<div class="clear"> </div>
 					</div>
-					<input type="submit" value="ENREGISTRER">
+					<input type="submit" value="ENREGISTRER">-->
 				</form>
 			<!--<p>Don't have an Account? <a href="#"> Precedent!</a></p>-->	
 			</div>
@@ -53,18 +88,7 @@
 			<p>© 2023 sai i lama . Tout droits reserve | Designe par <a href="http:\\www.Digit-Tech-Innov.com" target="_blank">Digit-Tech-Innov</a></p>
 		</div>
 		<!-- //copyright -->
-		<ul class="colorlib-bubbles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
+		
 	</div>
 	<!-- //main -->
 </body>

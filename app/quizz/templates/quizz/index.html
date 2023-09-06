@@ -1,6 +1,124 @@
-{% extends 'base.html' %}
+{% load static %}
 
-{% block content %}
-<h1><center>sai academy</center></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZZ</title>
+    <link  rel="stylesheet" type="text/css" media="all" href="{% static 'css/styl.css' %}" />
+</head>
+<body>
+    <main class="main">
+        
+        <header class="header">
+            <div class="col-xs-2">
+                <div id="logo">
+                    <a>
+                        <img class="normal_logo" src="{% static 'img/PRÉSENTATION 4G1.png' %}" alt="image"
+                                             title="" style="max-height:90px;"/> 
+                    </a>
+                </div>
+            </div>
+            <nav class="navbar">
+                <a href="#" class="active"></a>
+               <!--<a href="#">A propops</a>
+                <a href="#">service</a>
+                <a href="#">Support</a>-PRÉSENTATION 4G1.png-->
+            </nav>
+            
+        </header>
+    <div class="container">
+            <section class="quiz-section">
+                <div class="quiz-box">
+                    <h1>saï i lama </h1>
+                    <div class="quiz-header">
+                        <div class="timer">
+                            <div class="time_text">Time</div>
+                            <div class="timer_sec">15</div>
+                        </div> 
+                        
+                        <span class="head-score">Score: 0/10</span>
+                        <div class="time_line"></div>
+                    </div>
 
-{% endblock %}
+                    <h2 class="question-text">Question 1?</h2>
+                    <div class="option-list">
+                        <!--<div class="option">
+                            <span>A. Lorem ipsum dolor sit.</span>
+                        </div>
+                        <div class="option">
+                            <span>B. Lorem ipsum dolor sit amet.</span>
+                        </div>
+                        <div class="option">
+                            <span>C. Lorem, ipsum dolor.</span>
+                        </div>
+                        <div class="option">
+                            <span>D. Lorem ipsum dolor sit amet consectetur.</span>
+                        </div>-->
+                    </div>
+                    <div class="quiz-footer">
+                        <span class="question-total">1 sur 10 questions</span>
+                        <button class="next-btn">Suivant</button>
+                    </div>
+                </div>
+
+
+
+                <div class="result-box">
+                    <h2>Résultat du test!</h2>
+                    <div class="percentage-container">
+                        <div class="cicular-progress">
+                            <span class="progress-value">0%</span>
+                        </div>
+
+                        <p class="score-text">Votre score est de 0 sur 10</p>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="TryAgain-btn">Reessayer</button>
+                        <button class="next-btn">Suivant</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="home">
+                <div class="home-content">
+                    <h1>Quiz App</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <button class="start-btn">START QUIZ</button>
+                </div>
+            </section>
+        </div>
+    </main>       
+    
+    <div class="popup-info">
+        <h2>Quiz Guide</h2>
+        <span class="info">1. Vous avez <strong>15 secondes</strong> pour chaque questions, et nous avons en tout <strong>10</strong> questions.</span>
+        <span class="info">2. Une fois une reponse selectionner, il est impossible de cliquer sur une autre.</span>
+        <span class="info">3. Une fois le temp ecouler, il n'est plus possible de cliquer sur un champ, vous devez passer a la questions suivante.</span>
+        <span class="info">4. Vous ne pouvez pas droit a une correction.</span>
+        <span class="info">5. Vous rapportez 1 point pour une reponse correcte, plus de <strong>5/10 </strong>vous fait reussir le test.</span>
+
+        <div class="btn-group">
+            <button class="info-btn exit-btn">Exit</button>
+            <a href="#" class="info-btn continue-btn">Continue</a>
+        </div>
+    </div>
+    
+   <!--<div class="result_box">
+        <div class="complete_text"></div>
+        <div class="score_text">
+        
+        </div>
+        <div class="button">
+            <button class="restart"> Refaire le quiz</button>
+            <button class="quit">Quitter</button>
+        </div>
+    </div>-->
+    
+    <script type="text/javascript" src="{% static 'js/questions.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -67,7 +67,7 @@
 						<label><input type="checkbox">Les informations entrées sont-elles valides?</label>
 					</div>
 					<button type="submit" class="btn">Enregistrer</button>
-                    <a href="{% url 'index' %}">Continuer</a>
+                    
 					
 					
 					<!--<div class="wthree-text">
@@ -78,6 +78,9 @@
 						<div class="clear"> </div>
 					</div>
 					<input type="submit" value="ENREGISTRER">-->
+					{% if message_erreur %}
+                   <p>{{ message_erreur }}</p>
+                    {% endif %}
 				</form>
 			<!--<p>Don't have an Account? <a href="#"> Precedent!</a></p>-->	
 			</div>
